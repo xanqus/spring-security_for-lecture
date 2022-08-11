@@ -21,6 +21,7 @@ public class SecurityConfig {
                         .antMatchers("/admin/**")
                         .access("hasRole('ROLE_ADMIN')")
                         .anyRequest().permitAll())
+                //인증 안된 페이지로 가면 로그인 페이지로 보냄
                 .formLogin()
                 .loginPage("/login")
                 .and()
