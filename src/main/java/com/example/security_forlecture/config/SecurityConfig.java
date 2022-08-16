@@ -31,6 +31,7 @@ public class SecurityConfig {
                 //인증 안된 페이지로 가면 로그인 페이지로 보냄
                 .formLogin()
                 .loginPage("/loginForm")
+                //.usernameParameter("username2") username 파라미터 바꾸고싶으면 이렇게
                 .loginProcessingUrl("/login")// login 주소가 호출이 되면 시큐리티가 낚아채서 대신 로그인을 진행해준다.
                 // /login 안만들어도 됨
                 .defaultSuccessUrl("/")
